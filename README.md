@@ -1,9 +1,10 @@
 # rat
-rat is a client-side router which makes it easy to map javascript functions to URL pathnames.
+routers are terrible, so use one that isn't 😎
 
-## Quickstart
-Create a router which logs out `Hello, World!` at `/`
+## Use Case
+rat will work for you if you want to map client-side javascript to different URL paths.
 
+For example, here we will log out `Hello, World!` if the user goes to `/`
 ```js
 let rat = new Rat()
 
