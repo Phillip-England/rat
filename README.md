@@ -139,6 +139,27 @@ rat.run()
 
 ![Middleware](static/mw.jpg)
 
+### Applying Middleware To Specific Groups
+What if you want to apply a middleware to all routes that start with `/user`?
 
+```js
+const rat = new Rat()
+
+function helloMiddleware(next) {
+    return () => {
+        console.log('Hello, Before Middleware2!')
+        next()
+        console.log('Hello, After Middleware2!')
+    }
+}
+
+rat.use("/user", helloMiddleware)
+
+rat.at('/user/{id}', () => {
+    console.log('Hello, User!')
+})
+
+rat.run()
+```
 
 
