@@ -109,6 +109,10 @@ Middleware execution starts at the *end* of the middleware chain. So in this exa
 4. helloMiddleware2 prints: `Hello, After Middleware2!`
 5. helloMiddleware prints: `Hello, After Middleware!`
 
+
+![Middleware](static/mw.jpg)
+
+
 ```js
 const rat = new Rat()
 
