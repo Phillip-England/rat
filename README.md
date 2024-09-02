@@ -36,7 +36,6 @@ rat.run()
 
 ## Middleware
 
-
 ### Middleware Skeleton
 Middleware allows us to reuse Javascript code on multiple pages. At it's heart, middleware are *just* functions. Here is the skeleton of a middleware function.
 ```js
