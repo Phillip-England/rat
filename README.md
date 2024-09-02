@@ -2,15 +2,15 @@
 rat is a client-side router which makes it easy to map javascript functions to URL pathnames.
 
 ## Quickstart
+Create a router which logs out `Hello, World!` at `/`
 
-
-### Hello, World at `/`
 ```js
 let rat = new Rat()
 
 rat.at('/', () => {
     console.log('Hello, World!')
 })
+
 rat.run()
 ```
 
