@@ -3,14 +3,27 @@ rat is a client-side router which makes it easy to map javascript functions to U
 
 ## Quickstart
 
+
+## Hello, World at `/`
 ```js
 let rat = new Rat()
 
 rat.at('/', () => {
-    console.log('/')
+    console.log('Hello, World!')
 })
-
 rat.run()
+```
+
+## Installation
+
+### Copy the Source Code
+If rat becomes popular, I will host it on a CDN for fast delivery. Until then, copy the source code [directly](https://raw.githubusercontent.com/Phillip-England/rat/main/index.js).
+
+Include the path to your static `rat.js` file in the `<head>` of your project.
+```html
+<head>
+    <script src='/path/to/rat.js'></script>
+</head>
 ```
 
 ## Middleware
@@ -83,28 +96,9 @@ Middleware execution starts at the *end* of the middleware chain. So in this exa
 2. helloMiddleware2 prints: `Hello, Before Middleware2!`
 3. The handler for `/` prints: `/`
 4. helloMiddleware2 prints: `Hello, After Middleware2!`
-4. helloMiddleware prints: `Hello, After Middleware!`
+5. helloMiddleware prints: `Hello, After Middleware!`
 
 
 
-## Installation
-If rat becomes popular, I will host it on a CDN for fast delivery. Until then, copy the source code [directly](https://raw.githubusercontent.com/Phillip-England/rat/main/index.js).
-
-```html
-<head>
-    <script src='/path/to/rat.js'></script>
-</head>
-```
-
-## The `rat` Object
-In the bottom of `rat.js`, a rat object is declared
-
-```js
-const rat = new Rat()
-```
-
-This makes the rat object *immediately* available when you include `rat.js` in your project.
-
-You don't have to instatiate rat yourself, we got you.
 
 
