@@ -1,4 +1,4 @@
-class ClientRouter {
+class Rat {
 
     constructor() {
         this.routes = {}
@@ -82,7 +82,7 @@ class ClientRouter {
 
 }
 
-const app = new ClientRouter();
+const rat = new Rat();
 
 function helloMiddleware(next) {
     return () => {
@@ -92,8 +92,8 @@ function helloMiddleware(next) {
     }
 }
 
-app.use("*", helloMiddleware)
+rat.use("*", helloMiddleware)
 
-app.at("/", () => {
+rat.at("/", () => {
     console.log('/')
 })
