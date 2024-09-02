@@ -4,7 +4,7 @@ rat is a client-side router which makes it easy to map javascript functions to U
 ## Quickstart
 
 
-## Hello, World at `/`
+### Hello, World at `/`
 ```js
 let rat = new Rat()
 
