@@ -81,19 +81,3 @@ class Rat {
     }
 
 }
-
-const rat = new Rat();
-
-function helloMiddleware(next) {
-    return () => {
-        console.log('Hello, Before Middleware!')
-        next()
-        console.log('Hello, After Middleware!')
-    }
-}
-
-rat.use("*", helloMiddleware)
-
-rat.at("/", () => {
-    console.log('/')
-})
