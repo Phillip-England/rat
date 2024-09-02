@@ -1,25 +1,9 @@
 # rat
 routers are terrible, so use one that isn't 😎
-
-## Use Case
-rat will work for you if you want to map client-side javascript to different URL paths.
-
-For example, here we will log out `Hello, World!` if the user goes to `/`
 ```js
 let rat = new Rat()
 
 rat.at('/', () => {
-    console.log('Hello, World!')
-})
-
-rat.run()
-```
-
-Dynamic paths work too! This code will log `Hello, World!` on any page with a pathname which starts with `/user/`
-```js
-let rat = new Rat()
-
-rat.at('/user/{id}', () => {
     console.log('Hello, World!')
 })
 
@@ -36,6 +20,18 @@ Include the path to your static `rat.js` file in the `<head>` of your project.
 <head>
     <script src='/path/to/rat.js'></script>
 </head>
+```
+
+## Dyanmic Paths
+Dynamic paths work too! This code will log `Hello, World!` on any page with a pathname which starts with `/user/`
+```js
+let rat = new Rat()
+
+rat.at('/user/{id}', () => {
+    console.log('Hello, World!')
+})
+
+rat.run()
 ```
 
 ## Middleware
